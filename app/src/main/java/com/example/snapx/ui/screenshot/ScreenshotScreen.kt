@@ -4,7 +4,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PhotoCamera
+import androidx.compose.material.icons.filled.Camera
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -84,7 +84,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        Icons.Filled.PhotoCamera,
+                        Icons.Filled.Camera,
                         contentDescription = "整屏截图",
                         modifier = Modifier.size(48.dp)
                     )
@@ -102,7 +102,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        Icons.Filled.Image,
+                        Icons.Filled.Edit,
                         contentDescription = "区域截图",
                         modifier = Modifier.size(48.dp)
                     )

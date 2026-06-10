@@ -2,8 +2,8 @@ package com.example.snapx.ui.main
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.PhotoCamera
-import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Camera
+import androidx.compose.material.icons.filled.ViewList
 import androidx.compose.material.icons.filled.Collections
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -27,8 +27,8 @@ sealed class Screen(
     val title: String,
     val icon: androidx.compose.ui.graphics.vector.ImageVector
 ) {
-    object Screenshot : Screen("screenshot", "截图", Icons.Filled.PhotoCamera)
-    object LongScreenshot : Screen("long_screenshot", "长截图", Icons.Filled.Image)
+    object Screenshot : Screen("screenshot", "截图", Icons.Filled.Camera)
+    object LongScreenshot : Screen("long_screenshot", "长截图", Icons.Filled.ViewList)
     object History : Screen("history", "历史", Icons.Filled.Collections)
     object Settings : Screen("settings", "设置", Icons.Filled.Settings)
 }

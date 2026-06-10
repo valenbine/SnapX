@@ -75,7 +75,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 ) {
                     Button(onClick = { }) {
                         Icon(
-                            Icons.Filled.Image,
+                            Icons.Filled.Edit,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -95,7 +95,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            Icons.Filled.Image,
+                            Icons.Filled.Edit,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
