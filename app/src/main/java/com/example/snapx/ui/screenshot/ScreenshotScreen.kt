@@ -3,7 +3,9 @@ package com.example.snapx.ui.screenshot
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.icons.Icons.Rounded
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.PhotoCamera
+import androidx.compose.material.icons.rounded.Crop
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -82,7 +84,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        Rounded.PhotoCamera,
+                        Icons.Rounded.PhotoCamera,
                         contentDescription = "整屏截图",
                         modifier = Modifier.size(48.dp)
                     )
@@ -100,7 +102,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        Rounded.Crop,
+                        Icons.Rounded.Crop,
                         contentDescription = "区域截图",
                         modifier = Modifier.size(48.dp)
                     )

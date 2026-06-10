@@ -99,7 +99,7 @@ class ScreenshotService(private val context: Context) {
             screenWidth,
             screenHeight,
             screenDensity,
-            android.hardware.display.VirtualDisplay.FLAG_AUTO,
+            0,
             imageReader?.surface,
             null,
             handler

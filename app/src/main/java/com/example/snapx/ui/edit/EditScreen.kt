@@ -1,7 +1,12 @@
 package com.example.snapx.ui.edit
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.icons.Icons.Rounded
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.Crop
+import androidx.compose.material.icons.rounded.Edit
+import androidx.compose.material.icons.rounded.Blur
+import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -29,7 +34,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
             
             IconButton(onClick = { navController.popBackStack() }) {
                 Icon(
-                    Rounded.Close,
+                    Icons.Rounded.Close,
                     contentDescription = "关闭"
                 )
             }
@@ -71,7 +76,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 ) {
                     Button(onClick = { }) {
                         Icon(
-                            Rounded.Crop,
+                            Icons.Rounded.Crop,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -81,7 +86,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            Rounded.Edit,
+                            Icons.Rounded.Edit,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -91,7 +96,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            Rounded.Blur,
+                            Icons.Rounded.Blur,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -111,7 +116,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 modifier = Modifier.weight(1f)
             ) {
                 Icon(
-                    Rounded.Share,
+                    Icons.Rounded.Share,
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
                 )
