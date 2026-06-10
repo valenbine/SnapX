@@ -85,14 +85,15 @@ dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // Coil
+// Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
-
+    
     // Accompanist (权限请求)
     implementation("com.google.accompanist:accompanist-permissions:0.32.0")
-
+    
     // OpenCV (可选，用于图像处理)
-    implementation("org.opencv:opencv-android:4.8.0")
+    // 注释掉，不在标准Maven仓库中
+    // implementation("org.opencv:opencv-android:4.8.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
