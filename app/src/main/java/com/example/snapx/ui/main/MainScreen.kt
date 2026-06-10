@@ -3,8 +3,8 @@ package com.example.snapx.ui.main
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PhotoCamera
-import androidx.compose.material.icons.filled.ViewStream
-import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Collections
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -27,10 +27,10 @@ sealed class Screen(
     val title: String,
     val icon: androidx.compose.ui.graphics.vector.ImageVector
 ) {
-    object Screenshot : Screen("screenshot", "截图", Icons.Default.PhotoCamera)
-    object LongScreenshot : Screen("long_screenshot", "长截图", Icons.Default.ViewStream)
-    object History : Screen("history", "历史", Icons.Default.History)
-    object Settings : Screen("settings", "设置", Icons.Default.Settings)
+    object Screenshot : Screen("screenshot", "截图", Icons.Filled.PhotoCamera)
+    object LongScreenshot : Screen("long_screenshot", "长截图", Icons.Filled.Image)
+    object History : Screen("history", "历史", Icons.Filled.Collections)
+    object Settings : Screen("settings", "设置", Icons.Filled.Settings)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
