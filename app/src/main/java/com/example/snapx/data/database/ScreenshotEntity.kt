@@ -53,7 +53,7 @@ data class ScreenshotEntity(
                 "TEMPLATE_MATCH" -> StitchAlgorithm.TEMPLATE_MATCH
                 "FEATURE_DETECT" -> StitchAlgorithm.FEATURE_DETECT
                 "TEMPLATE_MATCH_AUTO" -> StitchAlgorithm.TEMPLATE_MATCH_AUTO
-                "FEATURE_DETECT_AUTO" -> StitchAlgorithm.FEATURE_DETECT_AUTO"
+                "FEATURE_DETECT_AUTO" -> StitchAlgorithm.FEATURE_DETECT_AUTO
                 else -> StitchAlgorithm.TEMPLATE_MATCH
             }
         }

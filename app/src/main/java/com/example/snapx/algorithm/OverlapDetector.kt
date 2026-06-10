@@ -73,9 +73,7 @@ class OverlapDetector {
     private fun calculateMean(pixels: IntArray): Double {
         var sum = 0.0
         for (pixel in pixels) {
-            val gray = ((pixel shr 16) & 0xFF) * 0.299 +
-                       ((pixel shr 8) & 0xFF) * 0.587 +
-                       (pixel & 0xFF) * 0.114
+            val gray = ((pixel shr 16) and 0xFF) * 0.299 + ((pixel shr 8) and 0xFF) * 0.587 + (pixel and 0xFF) * 0.114
             sum += gray
         }
         return sum / pixels.size
@@ -84,9 +82,7 @@ class OverlapDetector {
     private fun calculateVariance(pixels: IntArray, mean: Double): Double {
         var sum = 0.0
         for (pixel in pixels) {
-            val gray = ((pixel shr 16) & 0xFF) * 0.299 +
-                       ((pixel shr 8) & 0xFF) * 0.587 +
-                       (pixel & 0xFF) * 0.114
+            val gray = ((pixel shr 16) and 0xFF) * 0.299 + ((pixel shr 8) and 0xFF) * 0.587 + (pixel and 0xFF) * 0.114
             sum += (gray - mean) * (gray - mean)
         }
         return sum / pixels.size
@@ -95,14 +91,8 @@ class OverlapDetector {
     private fun calculateCovariance(pixels1: IntArray, pixels2: IntArray, mean1: Double, mean2: Double): Double {
         var sum = 0.0
         for (i in pixels1.indices) {
-            val gray1 = ((pixels1[i] shr 16) & 0xFF) * 0.299 +
-                        ((pixels1[i] shr 8) & 0xFF) * 0.587 +
-                        (pixels1[i] & 0xFF) * 0.114
-            
-            val gray2 = ((pixels2[i] shr 16) & 0xFF) * 0.299 +
-                        ((pixels2[i] shr 8) & 0xFF) * 0.587 +
-                        (pixels2[i] & 0xFF) * 0.114
-            
+            val gray1 = ((pixels1[i] shr 16) and 0xFF) * 0.299 + ((pixels1[i] shr 8) and 0xFF) * 0.587 + (pixels1[i] and 0xFF) * 0.114
+            val gray2 = ((pixels2[i] shr 16) and 0xFF) * 0.299 + ((pixels2[i] shr 8) and 0xFF) * 0.587 + (pixels2[i] and 0xFF) * 0.114
             sum += (gray1 - mean1) * (gray2 - mean2)
         }
         return sum / pixels1.size
