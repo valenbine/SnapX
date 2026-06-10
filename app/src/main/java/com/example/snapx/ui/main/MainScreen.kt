@@ -1,3 +1,4 @@
+import androidx.compose.material.icons.Icons.Rounded
 package com.example.snapx.ui.main
 
 import androidx.compose.foundation.layout.*

@@ -1,3 +1,4 @@
+import androidx.compose.material.icons.Icons.Rounded
 package com.example.snapx.ui.screenshot
 
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -47,7 +48,7 @@ fun ScreenshotScreen(navController: NavController) {
             style = MaterialTheme.typography.titleLarge
         )
         
-        if (!viewModel.hasMediaProjectionPermission) {
+        if (!viewModel.hasMediaProjectionPermission.value) {
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer)
@@ -81,7 +82,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        androidx.compose.material.icons.Icons.Default.PhotoCamera,
+                        androidx.compose.material.icons.Icons.Rounded.PhotoCamera,
                         contentDescription = "整屏截图",
                         modifier = Modifier.size(48.dp)
                     )
@@ -99,7 +100,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        androidx.compose.material.icons.Icons.Default.Crop,
+                        androidx.compose.material.icons.Icons.Rounded.Crop,
                         contentDescription = "区域截图",
                         modifier = Modifier.size(48.dp)
                     )
@@ -127,7 +128,7 @@ fun ScreenshotScreen(navController: NavController) {
                 }
             }
             
-            if (viewModel.isCapturing) {
+            if (viewModel.isCapturing.value) {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
@@ -143,7 +144,7 @@ fun ScreenshotScreen(navController: NavController) {
                 }
             }
             
-            if (viewModel.lastScreenshot != null) {
+            if (viewModel.lastScreenshot.value != null) {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = {

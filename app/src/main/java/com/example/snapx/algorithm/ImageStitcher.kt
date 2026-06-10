@@ -3,6 +3,7 @@ package com.example.snapx.algorithm
 import android.graphics.Bitmap
 import com.example.snapx.data.storage.FileStorageManager
 import com.example.snapx.model.ScreenshotMode
+import com.example.snapx.model.StitchAlgorithm
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -166,11 +167,4 @@ sealed class StitchResult {
         val needRetry: Boolean,
         val errorMessage: String
     ) : StitchResult()
-}
-
-enum class StitchAlgorithm {
-    TEMPLATE_MATCH,
-    FEATURE_DETECT,
-    TEMPLATE_MATCH_AUTO,
-    FEATURE_DETECT_AUTO
 }

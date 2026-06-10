@@ -1,3 +1,4 @@
+import androidx.compose.material.icons.Icons.Rounded
 package com.example.snapx.ui.history
 
 import androidx.compose.foundation.layout.*
@@ -111,7 +112,7 @@ fun ScreenshotItem(
             
             IconButton(onClick = onDelete) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Default.Delete,
+                    androidx.compose.material.icons.Icons.Rounded.Delete,
                     contentDescription = "删除"
                 )
             }

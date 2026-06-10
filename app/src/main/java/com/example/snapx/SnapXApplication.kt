@@ -34,15 +34,19 @@ class SnapXApplication : Application() {
         scheduleCleanupWork()
     }
     
-    private fun createNotificationChannel() {
+private fun createNotificationChannel() {
         val channel = NotificationChannel(
             NOTIFICATION_CHANNEL_ID,
             "X截图服务",
             NotificationManager.IMPORTANCE_LOW
         ).apply {
-            description = "截图工具后台服务通知"
+            description = "X截图后台服务通知"
             setShowBadge(false)
         }
+        
+        val notificationManager = getSystemService(NotificationManager::class.java) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
+    }
         
         val notificationManager = getSystemService(NotificationManager) as NotificationManager
         notificationManager.createNotificationChannel(channel)
@@ -80,4 +84,3 @@ class SnapXApplication : Application() {
             return instance.settingsDataStore
         }
     }
-}

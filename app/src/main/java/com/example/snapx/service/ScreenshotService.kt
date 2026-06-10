@@ -99,7 +99,7 @@ class ScreenshotService(private val context: Context) {
             screenWidth,
             screenHeight,
             screenDensity,
-            android.hardware.display.VirtualDisplay.FLAG_AUTO,
+            android.hardware.display.VirtualDisplay.FLAG_PUBLIC,
             imageReader?.surface,
             null,
             handler
@@ -145,7 +145,13 @@ class ScreenshotService(private val context: Context) {
         _isCapturing.value = true
         
         return kotlinx.coroutines.withTimeoutOrNull(Constants.RETRY_DELAY_MS * Constants.MAX_RETRY_COUNT) {
-            kotlinx.coroutines.flow.first { it != null }
+            var result: Bitmap? = null
+            while (_lastScreenshot.value == null) {
+                kotlinx.coroutines.delay(100)
+            }
+            result = _lastScreenshot.value
+            _isCapturing.value = false
+            result
         }
     }
     

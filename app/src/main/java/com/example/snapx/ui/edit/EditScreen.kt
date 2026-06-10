@@ -1,3 +1,4 @@
+import androidx.compose.material.icons.Icons.Rounded
 package com.example.snapx.ui.edit
 
 import androidx.compose.foundation.layout.*
@@ -28,7 +29,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
             
             IconButton(onClick = { navController.popBackStack() }) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Default.Close,
+                    androidx.compose.material.icons.Icons.Rounded.Close,
                     contentDescription = "关闭"
                 )
             }
@@ -70,7 +71,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 ) {
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Default.Crop,
+                            androidx.compose.material.icons.Icons.Rounded.Crop,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -80,7 +81,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Default.Edit,
+                            androidx.compose.material.icons.Icons.Rounded.Edit,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -90,7 +91,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Default.Blur,
+                            androidx.compose.material.icons.Icons.Rounded.Blur,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -110,7 +111,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 modifier = Modifier.weight(1f)
             ) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Default.Share,
+                    androidx.compose.material.icons.Icons.Rounded.Share,
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
                 )
