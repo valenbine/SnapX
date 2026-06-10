@@ -45,11 +45,7 @@ private fun createNotificationChannel() {
         }
         
         val notificationManager = getSystemService(NotificationManager::class.java) as NotificationManager
-        notificationManager.createNotificationChannel(channel)
-    }
-        
-        val notificationManager = getSystemService(NotificationManager) as NotificationManager
-        notificationManager.createNotificationChannel(channel)
+notificationManager.createNotificationChannel(channel)
     }
     
     private fun scheduleCleanupWork() {
