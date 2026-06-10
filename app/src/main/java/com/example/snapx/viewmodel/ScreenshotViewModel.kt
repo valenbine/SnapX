@@ -122,19 +122,21 @@ class ScreenshotViewModel(application: Application) : AndroidViewModel(applicati
                 val file = java.io.File(record.filePath)
                 if (file.exists()) {
                     val uri = androidx.core.content.FileProvider.getUriForFile(
-                        getApplication(),
-                        "${getApplication().packageName}.fileprovider",
+                        getApplication() as android.content.Context,
+                        "${(getApplication() as android.content.Context).packageName}.fileprovider",
                         file
                     )
                     
-                    val shareIntent = Intent(Intent.ACTION_SEND)
-                    shareIntent.type = "image/png"
-                    shareIntent.putExtra(Intent.EXTRA_STREAM, uri)
-                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = "image/png"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
                     
-                    val chooserIntent = Intent.createChooser(shareIntent, "分享截图")
-                    chooserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    getApplication().startActivity(chooserIntent)
+                    val chooserIntent = Intent.createChooser(shareIntent, "分享截图").apply {
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
+                    (getApplication() as android.content.Context).startActivity(chooserIntent)
                 }
             }
         }
