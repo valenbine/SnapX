@@ -45,7 +45,7 @@ private fun createNotificationChannel() {
         }
         
         val notificationManager = getSystemService(NotificationManager::class.java) as NotificationManager
-notificationManager.createNotificationChannel(channel)
+        notificationManager.createNotificationChannel(channel)
     }
     
     private fun scheduleCleanupWork() {
@@ -57,7 +57,7 @@ notificationManager.createNotificationChannel(channel)
                 TimeUnit.DAYS
             ).build()
             
-            WorkManager.getInstance(this@ScreenshotApplication).enqueueUniquePeriodicWork(
+            WorkManager.getInstance(this@SnapXApplication).enqueueUniquePeriodicWork(
                 CLEANUP_WORK_NAME,
                 ExistingPeriodicWorkPolicy.KEEP,
                 cleanupWork
@@ -80,3 +80,4 @@ notificationManager.createNotificationChannel(channel)
             return instance.settingsDataStore
         }
     }
+}
