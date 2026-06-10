@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.screenshotapp"
+    namespace = "com.example.snapx"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.screenshotapp"
+        applicationId = "com.example.snapx"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">截图工具</string>
-    <string name="accessibility_service_description">截图工具长图拼接功能需要无障碍服务来实现自动滚动截图。</string>
+    <string name="app_name">X截图</string>
+    <string name="accessibility_service_description">X截图长图拼接功能需要无障碍服务来实现自动滚动截图。</string>
     
     <!-- 截图页 -->
     <string name="normal_screenshot">普通截图</string>

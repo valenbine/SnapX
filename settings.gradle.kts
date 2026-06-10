@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ScreenshotApp"
+rootProject.name = "SnapX"
 include(":app")
