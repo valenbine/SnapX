@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import com.example.snapx.algorithm.ImageStitcher
 import com.example.snapx.algorithm.ScrollCompensator
-import com.example.snapx.algorithm.StitchAlgorithm
+import com.example.snapx.model.StitchAlgorithm
 import com.example.snapx.algorithm.StitchResult
 import com.example.snapx.data.storage.FileStorageManager
 import com.example.snapx.model.LongScreenshotConfig
@@ -67,6 +67,10 @@ class LongScreenshotProcessor(
         processingJob = processingScope.launch {
             try {
                 when (config?.mode) {
+                    ScreenshotMode.NORMAL -> {
+                        _statusMessage.value = "单屏截图不支持长图模式"
+                        _isProcessing.value = false
+                    }
                     ScreenshotMode.LONG_SCREEN_BY_SCREEN -> processScreenByScreen()
                     ScreenshotMode.LONG_PIXEL_SCROLL -> processPixelScroll()
                     ScreenshotMode.LONG_AUTO_DETECT -> processAutoDetect()

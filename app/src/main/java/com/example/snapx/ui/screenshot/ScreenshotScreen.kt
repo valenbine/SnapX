@@ -82,7 +82,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        androidx.compose.material.icons.Icons.Rounded.PhotoCamera,
+                        Rounded.PhotoCamera,
                         contentDescription = "整屏截图",
                         modifier = Modifier.size(48.dp)
                     )
@@ -100,7 +100,7 @@ fun ScreenshotScreen(navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Icon(
-                        androidx.compose.material.icons.Icons.Rounded.Crop,
+                        Rounded.Crop,
                         contentDescription = "区域截图",
                         modifier = Modifier.size(48.dp)
                     )

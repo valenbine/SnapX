@@ -113,7 +113,7 @@ fun ScreenshotItem(
             
             IconButton(onClick = onDelete) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Rounded.Delete,
+                    Rounded.Delete,
                     contentDescription = "删除"
                 )
             }

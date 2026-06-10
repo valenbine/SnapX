@@ -124,8 +124,4 @@ class LongScreenshotViewModel(application: Application) : AndroidViewModel(appli
     fun clearError() {
         _error.value = null
     }
-    
-    private suspend fun <T> kotlinx.coroutines.flow.Flow<T>.first(): T {
-        return kotlinx.coroutines.flow.first()
-    }
 }

@@ -13,6 +13,7 @@ import com.example.snapx.service.CleanupWorker
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.first
 import java.util.concurrent.TimeUnit
 
 class SnapXApplication : Application() {
@@ -50,7 +51,7 @@ private fun createNotificationChannel() {
     
     private fun scheduleCleanupWork() {
         applicationScope.launch {
-            val cleanDays = settingsDataStore.getAutoCleanDays()
+            val cleanDays = settingsDataStore.getAutoCleanDays().first()
             
             val cleanupWork = PeriodicWorkRequestBuilder<CleanupWorker>(
                 cleanDays.toLong(),

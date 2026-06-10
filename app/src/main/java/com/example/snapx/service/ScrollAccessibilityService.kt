@@ -158,8 +158,8 @@ class ScrollAccessibilityService : AccessibilityService() {
             val bounds = Rect()
             scrollableNode.getBoundsInScreen(bounds)
             
-            val scrollRange = scrollableNode.scrollRange()
-            val scrollY = scrollableNode.scrollY()
+            val scrollRange = scrollableNode.getActionList().size
+            val scrollY = scrollableNode.getChildCount()
             
             return scrollY >= scrollRange - 10
         }

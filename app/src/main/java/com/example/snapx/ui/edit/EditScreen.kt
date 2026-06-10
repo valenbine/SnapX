@@ -29,7 +29,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
             
             IconButton(onClick = { navController.popBackStack() }) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Rounded.Close,
+                    Rounded.Close,
                     contentDescription = "关闭"
                 )
             }
@@ -71,7 +71,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 ) {
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Rounded.Crop,
+                            Rounded.Crop,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -81,7 +81,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Rounded.Edit,
+                            Rounded.Edit,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -91,7 +91,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                     
                     Button(onClick = { }) {
                         Icon(
-                            androidx.compose.material.icons.Icons.Rounded.Blur,
+                            Rounded.Blur,
                             contentDescription = null,
                             modifier = Modifier.size(18.dp)
                         )
@@ -111,7 +111,7 @@ fun EditScreen(navController: NavController, screenshotId: Long?) {
                 modifier = Modifier.weight(1f)
             ) {
                 Icon(
-                    androidx.compose.material.icons.Icons.Rounded.Share,
+                    Rounded.Share,
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
                 )

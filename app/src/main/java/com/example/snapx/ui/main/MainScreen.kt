@@ -2,6 +2,7 @@ package com.example.snapx.ui.main
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons.Rounded
+import androidx.compose.material.icons.Icons.Default
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
